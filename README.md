@@ -231,8 +231,17 @@ Ask for "Click Paths," not just unit tests.
 ### MCP (Model Context Protocol) Integration
 The bridge that allows agents to leave the IDE and touch your infrastructure.
 
-- **Capabilities**: Tail logs (`/var/log`), Read DB Schema, Monitor Processes.
-- **Workflow**: "Investigate why checkout fails in prod." usage -> Agent reads logs directly -> correlations error -> proposes fix.
+**Two Ways to Implement:**
+
+1. **Adding Raw Prompt to File**  
+   Create a specifically crafted file (JSON config or script) containing the raw prompt or instruction set for the MCP server.  
+   *   **Use case**: Custom tools that require specific, unique logic not found elsewhere.
+   *   **Method**: Define the raw prompts/tools in a file and point your agent configuration to run or read this file.
+
+2. **Adding Already in Antigravity**  
+   Utilize the MCP servers and tools that are already integrated or pre-configured within the Antigravity framework.  
+   *   **Use case**: Standard operations (e.g., File system access, Git, Browser automation).
+   *   **Method**: Simply enable or configure the existing servers in your settings; no new code required.
 
 ### Local LLM Integration
 Install **Cline** to connect with Ollama. Run local LLMs (Llama 3) for offline, free coding.

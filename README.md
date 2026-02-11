@@ -229,7 +229,7 @@ Ask for "Click Paths," not just unit tests.
 ## ⚡ Phase 5: God Mode
 
 ### MCP (Model Context Protocol) Integration
-The bridge that allows agents to leave the IDE and touch your infrastructure.
+The bridge that allows agents to leave the IDE and touch your infrastructure and READ OFFICIAL DOCS.
 
 **Two Ways to Implement:**
 

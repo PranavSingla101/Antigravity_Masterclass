@@ -1,34 +1,46 @@
-# Writing Style Guide
+# Writing Style & Voice Guidelines
 
-## The "Antigravity" Tone
-This guide is written by a Senior Engineer / AI Architect, for other Engineers.
-- **Direct & Punchy**: Cut the fluff. Start with the value.
-- **Opinionated**: Don't offer too many choices. Prescribe the *best* path.
-- **Empowering**: Use language that instills confidence.
+> **Core Philosophy:** Prioritize clarity, brevity, and technical accuracy. Eliminate redundancy. Maintain a strictly professional and authoritative tone.
 
-## Premium Repository Aesthetics (The "Clean" Look)
-We adhere to a minimalist, high-contrast visual style similar to top-tier open source projects (e.g., "Awesome" lists, Vercel repos).
+---
 
-### 1. Minimal Emojis
-- **Do NOT** use emojis for every list item.
-- **Do NOT** use generic emojis (👍, 🚀) unless absolutely necessary.
-- **DO** use emojis strictly for:
-    - Section Headers (optional, max 1).
-    - Critical Alerts (🚨).
-    - distinguishing key categories in a broad list.
+## 1. Authoritative Technical Voice
+**Rule:** Adopt the persona of a Senior Staff Engineer.
 
-### 2. Layout & Typography
-- **Center the Hero**: The project title, subtitle, and badges should be centered.
-- **Use Badges**: Use Shields.io style badges for tech stacks and status.
-- **Tables over Lists**: When comparing rules or options, use Markdown tables instead of long bullet lists.
-- **White Space**: Use line breaks to let content breathe. Don't wall-of-text.
+* **Tone:** Objective, declarative, and efficient.
+* **Vocabulary:** Use precise technical terminology (e.g., "Latency," "Throughput," "Abstraction"). Avoid slang or hyperbole.
+* **Prohibited Phrasing:** "Please," "Kindly," "In my opinion," "I think," "Basically," "Just."
+* **Constraint:** Do not hedge statements. State technical facts as absolutes.
 
-### 3. Visual Hierarchy
-1.  **H1**: Project Title (Centered).
-2.  **H2**: Major Sections (underlined by `---` if needed).
-3.  **Bold**: For concepts and "Cracked Terms".
-4.  **Code**: For paths, files, and commands.
+---
 
-### 4. Vocabulary Reference
-- **Use**: "Cracked Prompt", "God Mode", "Artifact Protocol", "Context Sovereignty".
-- **Avoid**: "Please", "Kindly", "In conclusion".
+## 2. Aesthetic Standards
+**Rule:** Enforce visual minimalism to reduce cognitive load.
+
+* **Hero Sections:** Center the H1 title and brief description.
+* **Badges:** Use `shields.io` badges strictly for technical status (e.g., Build Passing, v1.0.0).
+* **Emojis:** Strictly prohibited in all contexts.
+* **Whitespace:** Use double line breaks between sections to improve scannability.
+
+---
+
+## 3. Formatting Integration
+**Rule:** Apply specific writing constraints to the structures defined in `formatting_rules.md`.
+
+* **Headers (H1-H4):**
+    * Use imperative verbs (e.g., "Configure the Environment" vs "Configuration").
+    * Limit titles to maximum 6 words.
+* **Alerts (`> [!TIP]`):**
+    * Reserve for high-value optimization techniques or critical architectural context.
+* **Code Comments:**
+    * Comments must explain *architecture and intent*, not syntax.
+    * *Incorrect:* `# Sets context variable to true`
+    * *Correct:* `# Enforces strict context isolation to prevent state leakage`
+
+---
+
+## 4. Data Presentation
+**Rule:** Choose the correct format for data density.
+
+* **Tables:** Mandatory for comparing 3+ items or contrasting attributes (e.g., Feature vs. Deprecation).
+* **Bullet Points:** Use only for sequential execution steps or unordered lists of single attributes.

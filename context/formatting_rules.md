@@ -1,136 +1,116 @@
-# 🎨 Formatting Rules & Visual Standards
+# Formatting Rules & Visual Standards
 
-> **Purpose:** This document acts as the "Design System" for our documentation. Since the entire repository functions as a comprehensive README, strict adherence to these formatting rules is critical for readability, navigation, and maintaining the "Premium" aesthetic.
-
----
-
-## 1. Hierarchy & Structure (The Skeleton)
-
-To ensure clear navigation across the "Masterclass" content, we use a strict heading hierarchy. 
-
-- **`# H1` (File Title)**  
-  *Usage:* **ONCE per file**. This is the main title.  
-  *Style:* Centered (if possible via HTML) or plain text.  
-  *Example:* `# Antigravity Masterclass`
-
-- **`## H2` (Main Sections / Concepts)**  
-  *Usage:* The primary divisions of the document. These denote major topic changes.  
-  *Style:* Standard Markdown.  
-  *Example:* `## 1. Context Sovereignty`
-
-- **`### H3` (Sub-sections / Strategies)**  
-  *Usage:* Specific actionable strategies or distinct parts of a concept.  
-  *Style:* Standard Markdown.  
-  *Example:* `### The "Context First" Strategy`
-
-- **`#### H4` (Detailed Steps / Components)**  
-  *Usage:* Breaking down a strategy into granular steps.  
-  *Style:* Standard Markdown.  
-  *Example:* `#### Step 1: Create the file`
-
-- **`**Bold**` (Key Concepts)**  
-  *Usage:* Highlight "Defined Terms" or "Cracked" vocabulary when first introduced.  
-  *Example:* "This is known as **Context Sovereignty**."
+> **System Goal:** Maintain a "Premium" aesthetic with strict adherence to GitHub Flavored Markdown (GFM). These rules govern readability, navigation, and structure.
 
 ---
 
-## 2. Alerts & Callouts (The Attention Grabbers)
+## 1. Hierarchy & Structure
+**Rule:** Use a strict heading hierarchy to create a scannable "skeleton" for the document.
 
-We use **GitHub Flavored Markdown** alerts to control the reader's flow and highlight critical information.
+* **`# H1` (File Title)**
+    * **Usage:** Exactly **ONCE** per file at the very top.
+    * **Format:** `# Title Name`
 
-### Usage Guide
+* **`## H2` (Main Sections)**
+    * **Usage:** Denotes major topic changes or distinct modules.
+    * **Format:** `## 1. Section Name`
 
-- **`> [!NOTE]`**  
-  *Use for:* Background context, "good to know" info, or sidebars that aren't critical to the immediate action.
+* **`### H3` (Sub-sections)**
+    * **Usage:** Specific strategies, actionable steps, or distinct parts of a concept.
+    * **Format:** `### The Strategy Name`
 
-- **`> [!TIP]`**  
-  *Use for:* "Cracked" hacks, optimization secrets, or shortcuts. **This is where the high-value alpha goes.**
+* **`#### H4` (Granular Steps)**
+    * **Usage:** Breaking down a complex instruction into parts.
+    * **Format:** `#### Step 1: Action`
 
-- **`> [!IMPORTANT]`**  
-  *Use for:* Core rules and non-negotiable protocols. (e.g., "Always verify before running").
-
-- **`> [!WARNING]`**  
-  *Use for:* Common pitfalls, errors to avoid, or things that will break the agent.
-
-- **`> [!CAUTION]`**  
-  *Use for:* Destructive actions or dangerous operations.
+* **`**Bold**` (Key Terms)**
+    * **Usage:** Use only for "Defined Terms" or new vocabulary when first introduced.
 
 ---
 
-## 3. The "Cracked" Components (Prompts & Examples)
+## 2. Alerts & Callouts (GFM)
+**Rule:** Use standard GitHub Alerts to control flow. Do not use generic blockquotes for warnings.
 
-We separate instruction from execution carefully.
+> [!NOTE]
+> Useful background info or sidebars.
+
+> [!TIP]
+> "Cracked" hacks, optimization secrets, or shortcuts.
+
+> [!IMPORTANT]
+> Core rules and non-negotiable standards.
+
+> [!WARNING]
+> Common errors or things that break the agent.
+
+> [!CAUTION]
+> Dangerous operations (e.g., deleting files, payment issues).
+
+---
+
+## 3. Code & Prompts
+**Rule:** Separate instruction from execution. Always use syntax highlighting.
 
 ### A. Prompts
-Prompts must be distinct and copy-paste friendly. Use a labeled code block or a specific blockquote style.
+Use a labeled blockquote or specific code block to distinguish prompts from regular text.
 
 **Format:**
 ```markdown
 ### 🧠 The Prompt
-> **Copy this:**  
-> "Act as a Senior Engineer... [Prompt Content]"
+> **Copy this:** > "Act as a Senior Engineer... [Prompt Content]"
 ```
 
-### B. Examples (Code & Config)
-Always specify the language syntax highlighting.
+### B. Code Blocks
+Always specify the language identifier (json, python, bash, markdown) for syntax highlighting.
 
 **Format:**
-```markdown
-### 📝 Example: `.cursorrules`
 ```json
 {
-  "context": "strict"
+  "context": "strict",
+  "optimization": true
 }
-```
 ```
 
 ---
 
-## 4. Visual Enriched Elements
+## 4. Visual Elements
+**Rule:** Prioritize visual density over walls of text.
 
 ### A. File Trees
-Use `ASCII` or standard tree format to show directory structure. This is crucial for "Context" explanations.
+Use `ASCII` format to show directory structure.
 
 ```text
 root/
 ├── .cursor/
-│   └── rules/           # Where the magic happens
-├── context/             # The brain
-└── README.md            # The face
+│   └── rules/           # Active rules
+├── context/             # Knowledge base
+└── README.md            # Entry point
 ```
 
-### B. Badges (Shields.io)
-Use badges under H1 titles to denote status or tech stack.
+### B. Tables
+Use tables for comparing 3+ items with attributes.
 
-`![Status](https://img.shields.io/badge/Status-Active-success)`
-
-### C. Tables
-Use tables instead of lists when comparing 3+ items with attributes.
-
-| Feature | Description | Importance |
+| Feature | Description | Priority |
 | :--- | :--- | :--- |
-| **Context** | The file awareness | High |
-| **Rules** | The instruction set | Critical |
+| **Context** | File awareness | High |
+| **Rules** | Instruction set | Critical |
 
-### D. Collapsible details
-Use `<details>` and `<summary>` for large blocks of reference text or logs to keep the page clean.
+### C. Collapsible Details
+Use HTML `<details>` tags for long logs, reference lists, or boilerplate code to keep the UI clean.
 
 ```html
 <details>
-<summary>View Full Logs</summary>
+<summary>Click to View Full Logs</summary>
 
-Line 1...
-Line 2...
+[Log data here...]
 
 </details>
 ```
 
 ---
 
-## 5. Navigation Constraints
+## 5. Navigation & Links
+**Rule:** Ensure the repo functions offline/cloned.
 
-- **Relative Links Only:** Always link using relative paths (`../context/file.md`) so the repo works offline/cloned.
-- **Explicit File References:** When mentioning a file in text, format it as code: `formatting_rules.md`.
-
----
-*Follow these rules to ensure the "Antigravity Masterclass" remains a premium, high-signal resource.*
+* **Relative Links:** Always use relative paths (e.g., `../context/file.md`), never absolute URLs for internal files.
+* **File References:** When mentioning a filename in a sentence, format as inline code: `formatting_rules.md`.

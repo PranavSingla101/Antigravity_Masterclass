@@ -52,4 +52,3 @@ When and Where is this Used?
 When to use it:
 
 Medium-to-Large Applications: It prevents the "scrolling fatigue" of finding a specific file in a giant components folder.
-
